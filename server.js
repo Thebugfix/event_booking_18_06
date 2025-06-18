@@ -30,6 +30,8 @@ app.use("/api/users", userRoutes)
 app.use("/api/events", eventRoutes)
 app.use("/api/bookings", bookingRoutes)
 
+app.get("/", (req, res) => {
+    res.json({ message: "Welcome to the Event Booking API" })
 
 // Error handling middleware
 app.use((err, req, res, next) => {
